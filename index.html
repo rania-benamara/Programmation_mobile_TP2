@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Contacts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <h1>Gestion De Contact</h1>
+      <div class="btn-modification">
+        <button class="btn" id="ajouter_bouton">Ajouter</button>
+        <button class="btn" id="modifier_bouton">Modifier</button>
+        <button class="btn" id="supprimer_bouton">Supprimer</button>
+        <button class="btn">Afficher</button>
+      </div>
+    </div>
+      <div class="ajouter" style="display: none;" id="ajouter_formulaire">
+        <form action="/submit-form" method="POST">
+          <div>
+              <label for="nom">Nom:</label>
+              <input type="text" id="nom" name="nom" required placeholder="Entrer votre nom">
+          </div>
+          <div>
+              <label for="prenom">Prenom:</label>
+              <input type="text" id="prenom" name="prenom" required placeholder="Entrer votre prenom">
+          </div>
+          <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="email@gmail.com">
+          </div>
+          <div>
+              <label for="telephone">Numero de telephone:</label>
+              <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required placeholder="+1 123 456 78 90">
+          </div>
+          <div>
+              <button type="submit" id="ajouter_form_btn">Ajouter</button>
+          </div>
+      </form>
+    </div>
+    <div class="message" style="display: none;" id="message">
+      <h3>Votre contact a été ajouté avec succès.</h3>
+      <button id="btn_retour">Retour</button>
+    </div>
+
+    <div class="modifier" style="display: none;" id="modifier">
+      <h1>Cherecher Par Email</h1>
+      <form action="" method="">
+        <div>
+            <input type="email" id="email" name="email" required placeholder="Entrer l'email a chercher">
+            <button id="chercher_bouton">Chercher</button>
+            <button id="annuler_bouton">Annuler</button>
+        </div>
+    </div>
+    
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
