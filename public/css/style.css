@@ -1,0 +1,347 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 20px;
+    color: #E6E6E6;
+    background-color: #272626;
+}
+
+.main{
+   display: flex;
+   flex-direction: column;
+  margin: auto;
+  
+}
+
+.container h1, .message h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-modification{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn{
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease;
+  outline:none;
+}
+
+.btn:hover{
+  background-color: #00705A;
+  color: #E6E6E6;
+  transform: scale(1.05);
+}
+
+/*---------------------- Ajouter---------------------------*/
+.ajouter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #272626;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+}
+.ajouter form {
+  /*display: flex;
+  flex-direction: column;*/
+  width: 100%;
+ 
+}
+.ajouter form div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.ajouter form label {
+  margin-bottom: 5px;
+}
+.ajouter form input, .modifier form input{
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.ajouter form button,.message button, .modifier button{
+  padding: 10px;
+  background-color: #00705A;
+  color: #E6E6E6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+.ajouter form button:hover,.message button:hover, .modifier form button:hover {
+  background-color: #005043;
+  transform: scale(1.05);
+}
+
+/*---------Message----------*/
+.message, .modifier{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #272626;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;
+  width: 90%;
+  max-width: 400px;
+}
+
+.message button {
+  margin-top: 15px;
+  width: auto;
+  min-width: 100px;
+  
+}
+
+/*-------------------Modifier----------------*/
+.modifier{
+  margin-top: 0px;
+  padding: 40px; 
+  z-index: 1;
+  width: 97%; 
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modifier form{
+  gap: 20px;
+}
+.modifier button{
+
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+ margin-left: 55px;
+}
+.modifier form input {
+  width: 100%; 
+  padding: 12px;
+  font-size: 18px;
+  box-sizing: border-box; 
+  margin-bottom: 17px;
+}
+
+
+/* Add this at the end of your existing style.css file */
+
+/* Login page styles */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #E6E6E6;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form label {
+  margin-bottom: 5px;
+  color: #E6E6E6;
+}
+
+.container form input {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.container form button {
+  padding: 10px;
+  background-color: #00705A;
+  color: #E6E6E6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.container form button:hover {
+  background-color: #005043;
+  transform: scale(1.05);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #E6E6E6;
+}
+
+.form-footer a {
+  color: #00705A;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust container max-width for signup form */
+.container {
+  max-width: 400px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .btn-modification {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .ajouter, .message, .modifier {
+    width: 95%;
+    max-width: none;
+  }
+
+  .modifier button {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .ajouter form input, .modifier form input {
+    font-size: 14px;
+  }
+
+  .ajouter form button, .message button, .modifier button {
+    font-size: 14px;
+  }
+}
+
+/* Login page styles */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #E6E6E6;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form label {
+  margin-bottom: 5px;
+  color: #E6E6E6;
+}
+
+.container form input {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.container form button {
+  padding: 10px;
+  background-color: #00705A;
+  color: #E6E6E6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.container form button:hover {
+  background-color: #005043;
+  transform: scale(1.05);
+}
+
+/* Additional responsive styles for login page */
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  .container form input {
+    font-size: 14px;
+  }
+
+  .container form button {
+    font-size: 14px;
+  }
+  .form-footer {
+    font-size: 14px;
+  }
+}
