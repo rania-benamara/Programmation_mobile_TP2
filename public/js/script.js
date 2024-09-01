@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  
     // Function to check if we're on the home page
     function isHomePage() {
         return window.location.pathname === '/home' || window.location.pathname === '/home.html';
